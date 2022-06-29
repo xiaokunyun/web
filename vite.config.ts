@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import legacy from '@vitejs/plugin-legacy'
 import { VitePWA } from 'vite-plugin-pwa'
 import AutoImport from 'unplugin-auto-import/vite'
+// import Pages from 'vite-plugin-pages'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -10,6 +11,9 @@ export default defineConfig({
     legacy({
       targets: ['defaults', 'not IE 11']
     }),
+    // Pages({
+    //   dirs: 'src/pages',
+    // }),
     VitePWA(),
     AutoImport({ 
       include: [
@@ -23,5 +27,5 @@ export default defineConfig({
       // ],
      }),
   ],
-  base: '/web/' // 为/仓库名/
+  // base: '/web/' // 为/仓库名/
 })
