@@ -10,9 +10,9 @@ const path = ref([
   { name: "web" },
   { name: "test" },
 ])
-const year = ref('')
-const date = ref('')
-const time = ref('')
+const year = ref(dayjs(new Date()).format('YYYY/MM-DD'))
+const date = ref(dayjs(new Date()).format('MM/DD'))
+const time = ref(dayjs(new Date()).format('hh:mm:ss'))
 onMounted(() => {
   Date1()
 })
