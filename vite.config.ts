@@ -23,4 +23,5 @@ export default defineConfig({
       // ],
      }),
   ],
+  base: '/web/' // 为/仓库名/
 })
