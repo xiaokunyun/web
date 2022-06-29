@@ -1,27 +1,23 @@
 #!/usr/bin/env sh
-
-# abort on errors
+# 发生错误时终止
 set -e
-
-# build
-npm run docs:build
-
-# navigate into the build output directory
-cd docs/.vitepress/dist
-
-# if you are deploying to a custom domain
+# 构建
+npm run build
+# 进入构建文件夹
+cd dist
+# 如果你要部署到自定义域名
 # echo 'www.example.com' > CNAME
-
 git init
 git add .
 git commit -m 'deploy'
 git branch -M master
 git remote add origin https://github.com/xiaokunyun/xiaokunyun.github.io.git
 git push -u origin master
-# if you are deploying to https://<USERNAME>.github.io
+
+# 如果你要部署在 https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
 
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
+# 如果你要部署在 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git main:gh-pages
 
 cd -
