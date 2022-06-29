@@ -6,6 +6,7 @@ const path = ref([
   { name: "home" },
   { name: "text" },
   { name: "web" },
+  { name: "test" },
 ])
 </script>
 
