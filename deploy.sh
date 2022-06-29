@@ -13,10 +13,11 @@ cd docs/.vitepress/dist
 # echo 'www.example.com' > CNAME
 
 git init
-git add -A
+git add .
 git commit -m 'deploy'
-git push -f git@github.com:<xiaokunyun>/<xiaokunyun>.github.io.git main
-
+git branch -M master
+git remote add origin https://github.com/xiaokunyun/xiaokunyun.github.io.git
+git push -u origin master
 # if you are deploying to https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
 
