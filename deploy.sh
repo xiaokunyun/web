@@ -12,7 +12,6 @@ git checkout -b main
 git add -A
 git commit -m 'deploy'
 git push -f git@github.com:<xiaokunyun>/<xiaokunyun>.github.io.git master
-
 # 如果你要部署在 https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
 
