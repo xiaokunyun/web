@@ -8,11 +8,10 @@ cd dist
 # 如果你要部署到自定义域名
 # echo 'www.example.com' > CNAME
 git init
+git checkout -b main
 git add -A
 git commit -m 'deploy'
-git branch -M master
-git remote add origin https://github.com/xiaokunyun/xiaokunyun.github.io.git
-git push -u origin master
+git push -f git@github.com:<xiaokunyun>/<xiaokunyun>.github.io.git master
 
 # 如果你要部署在 https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
