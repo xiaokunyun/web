@@ -1,7 +1,7 @@
 <template>
     <div>
-       <Mobile v-if="isMobileTerminal" />
-       <Pc v-else/>
+       <Mobile v-if="isMobileTerminal" :data="data" />
+       <Pc  :data="data" v-else/>
     </div>
 </template>
 
@@ -14,18 +14,17 @@ import axios from 'axios'
 onMounted(()=>{
     GETvideosList()
 })
-interface IVideoItem {
-  id: number;
-  imgSrc: string;
-  desc: string;
-  playCount: string;
-  commentCount: string;
-  videoSrc: string;
+interface INavItem {
+  id: string
+  text: string
 }
-const data=ref<IVideoItem[]>([])
+const data=ref<INavItem[]>([])
 async function GETvideosList() {
       const res = await navList()
+      data.value=res.data.result
       console.log("res",res);
+      console.log("data.value",data.value);
+
 }
 </script>
 
