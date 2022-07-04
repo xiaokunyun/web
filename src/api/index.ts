@@ -2,13 +2,13 @@ import axios from "axios";
 console.log("import.meta.env.VITE_BASE_API", import.meta.env.VITE_BASE_API);
 
 // 创建一个实例
-const service = axios.create({
+const api = axios.create({
     baseURL: import.meta.env.VITE_BASE_API,
     timeout: 1000,
     // headers: { 'X-Custom-Header': 'foobar' }
 });
 // 添加请求拦截器
-service.interceptors.request.use(function (config) {
+api.interceptors.request.use(function (config) {
     // 在发送请求之前做些什么
     return config;
 }, function (error) {
@@ -17,7 +17,7 @@ service.interceptors.request.use(function (config) {
 });
 
 // 添加响应拦截器
-service.interceptors.response.use(function (response) {
+api.interceptors.response.use(function (response) {
     // 2xx 范围内的状态码都会触发该函数。
     // 对响应数据做点什么
     return response;
@@ -27,4 +27,4 @@ service.interceptors.response.use(function (response) {
     return Promise.reject(error);
 });
 
-export default service
+export default api
