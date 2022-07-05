@@ -5,6 +5,7 @@ import videosList from './data/videosList'
 import recommendList from './data/recommendList'
 import commentsList from './data/commentsList'
 import videoDetailList from './data/videoDetailList'
+import list from './data/list'
 
 // mock的配置
 Mock.setup({
@@ -12,6 +13,12 @@ Mock.setup({
   timeout: '50-1000'
 })
 
+Mock.mock(/\/list/, 'get', () => {
+  return {
+    code: 0,
+    data: list
+  }
+})
 // 轮播图
 Mock.mock(/\/swiperList/, 'get', () => {
   return {

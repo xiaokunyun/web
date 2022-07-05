@@ -8,7 +8,6 @@ import 'virtual:windi.css'
 import '@/mock/index'
 import { useREM } from "@/util/flex";
 import 'virtual:svg-icons-register'
-// import '@/util/rem';
 const app=createApp(App)
 app.use(useREM)
 app.use(ArcoVue)

@@ -1,5 +1,5 @@
 <template>
-    <div class="h-full w-full relative bg-light-200">
+    <div class="h-full w-full relative">
         <div class="absolute right-60 bottom-52 w-80 h-96 text-blue-300 text-center shadow ">
             <h1>TiKi Platinum</h1>
             <h2>6228 8076 2232 8768</h2>

@@ -30,6 +30,9 @@ export default defineConfig({
         /\.md$/, // .md
       ],
       imports: ['vue', 'vue-router'],
+      eslintrc: {
+        enabled: true, // <-- this
+      },
     }),
     Components({dirs: ['src/components'],dts: true,resolvers: [ArcoResolver()],types: [{ from: 'vue-router',names: ['RouterLink', 'RouterView']}],}),
   ],
@@ -41,7 +44,7 @@ export default defineConfig({
   base: '/',
   server: {
     host: '0.0.0.0',
-    open: true,
+    // open: true,
     port: 9527,
   }
 })
