@@ -8,6 +8,14 @@ export default [
         component: () => import('../layout/index.vue')
     },
     {
+        path: '/home',
+        name: 'home',
+        meta: {
+            title: '主页',
+        },
+        component: () => import('../layout/index.vue')
+    },
+    {
         path: '/login',
         name: 'login',
         meta: {

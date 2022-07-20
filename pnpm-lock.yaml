@@ -12,6 +12,7 @@ specifiers:
   dayjs: ^1.11.3
   eslint: ^8.19.0
   eslint-plugin-vue: ^9.1.1
+  husky: ^8.0.1
   less: ^4.1.3
   mockjs: ^1.1.0
   pinia: ^2.0.14
@@ -50,6 +51,7 @@ devDependencies:
   '@vitejs/plugin-vue': 2.3.3_vite@2.9.12+vue@3.2.37
   eslint: 8.19.0
   eslint-plugin-vue: 9.1.1_eslint@8.19.0
+  husky: 8.0.1
   less: 4.1.3
   sass: 1.53.0
   scss: 0.2.4
@@ -3351,6 +3353,12 @@ packages:
       entities: 1.1.2
       inherits: 2.0.4
       readable-stream: 3.6.0
+    dev: true
+
+  /husky/8.0.1:
+    resolution: {integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /iconv-lite/0.6.3:
