@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-# 发生错误时终止
 set -e
 # 构建
 npm run build
@@ -8,7 +7,7 @@ cd dist
 # 如果你要部署到自定义域名
 # echo 'www.example.com' > CNAME
 git init
-git checkout -b main
+git checkout -b master
 git add -A
 git commit -m 'deploy'
 git push -f git@github.com:<xiaokunyun>/<xiaokunyun>.github.io.git master
