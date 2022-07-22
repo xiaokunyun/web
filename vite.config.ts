@@ -41,7 +41,7 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  base: '/',
+  base: '/web/',
   server: {
     host: '0.0.0.0',
     // open: true,
