@@ -16,12 +16,13 @@ jobs:
           cache: npm
       - run: npm install -g pnpm
       - run: pnpm install
+      - run: pnpm build
 
 
     #   - run: npm install --frozen-lockfile
 
-      - name: Build
-        run: pnpm build
+    #   - name: Build
+    #     run: pnpm build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
