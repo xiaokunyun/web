@@ -1,24 +1,49 @@
-name: Deploy
+# name: Deploy
 
+# on:
+#   push:
+#     branches:
+#       - master
+
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#       - uses: actions/setup-node@v3
+#         with:
+#           node-version: ['16','15','14',]
+#           cache: pnpm
+#       - run: npm install -g pnpm
+#       - run: pnpm install
+#       - run: pnpm build
+#       - name: Deploy
+#         uses: peaceiris/actions-gh-pages@v3
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           publish_dir: ./dist
+name: Deploy
 on:
   push:
     branches:
       - master
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Check out repository code
+        uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: ['16','15','14',]
-          cache: pnpm
+          node-version: 16
       - run: npm install -g pnpm
+      - run: pnpm -v
       - run: pnpm install
-      - run: pnpm build
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - run: pnpm run build
+      - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+
+
+
