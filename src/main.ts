@@ -7,9 +7,11 @@ import '@arco-design/web-vue/dist/arco.css';
 import 'virtual:windi.css'
 import '@/mock/index'
 import { useREM } from "@/util/flex";
+// import scroll from 'vue-seamless-scroll'
 import 'virtual:svg-icons-register'
 import "@/assets/styles/index.scss"
 const app=createApp(App)
+// app.use(scroll)
 app.use(useREM)
 app.use(ArcoVue)
 app.use(createPinia())
