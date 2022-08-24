@@ -9,11 +9,16 @@ import Components from 'unplugin-vue-components/vite'
 import {ArcoResolver} from 'unplugin-vue-components/resolvers'
 import WindiCSS from 'vite-plugin-windicss'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import Pages from 'vite-plugin-pages'
+
 export default defineConfig({
   plugins: [
     vue(),
     legacy({
       targets: ['defaults', 'not IE 11']
+    }),
+    Pages({
+        dirs: 'src/page',
     }),
     VitePWA(),
     WindiCSS(),
